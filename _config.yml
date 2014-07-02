@@ -1,11 +1,11 @@
 # Site settings
 title: "'Cat'.concat('Man')"
-email: your-email@domain.com
+email: reid@shopcube.com
 description: "'Cat'.concat('Man') is the official start-up got frisky with programming and had a djing baby blog of Reid Covington, the real CatMan."
 baseurl: ""
 url: "http://yourdomain.com"
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: "reidcovington"
+github_username: "reidcovington"
 
 # Build settings
 markdown: kramdown
