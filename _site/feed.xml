@@ -1,16 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Your awesome title</title>
-    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</description>
+    <title>&#39;Cat&#39;.concat(&#39;Man&#39;)</title>
+    <description>&#39;Cat&#39;.concat(&#39;Man&#39;) is the official start-up got frisky with programming and had a djing baby blog of Reid Covington, the real CatMan.</description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 30 Jun 2014 18:21:28 -0400</pubDate>
-    <lastBuildDate>Mon, 30 Jun 2014 18:21:28 -0400</lastBuildDate>
+    <pubDate>Wed, 02 Jul 2014 18:05:34 -0400</pubDate>
+    <lastBuildDate>Wed, 02 Jul 2014 18:05:34 -0400</lastBuildDate>
     <generator>Jekyll v2.1.0</generator>
     
       <item>
-        <title>Welcome to Jekyll!</title>
+        <title>Who&#39;s the Real CatMan</title>
+        <description>&lt;p&gt;“Do you have a dog?” Asked the woman in the elevator. &lt;br /&gt;
+“No. I have 2 cats.” &lt;br /&gt;
+“Oh,” she exclaimed and exchanged aroused glances with her partner. “It’s hard to find a good &lt;strong&gt;&lt;em&gt;cat man&lt;/em&gt;&lt;/strong&gt;…” &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;I wasn’t always a Cat Man though. It’s been a long journey to get here.&lt;/p&gt;
+
+&lt;p&gt;I guess it all started in a board room in Shanghai. I was sitting across the table from a portley&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 01 Jul 2014 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/jekyll/update/2014/07/01/who-is-the-real-cat-man/</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2014/07/01/who-is-the-real-cat-man/</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Like Whatever!</title>
         <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes!
 To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention: YYYY-MM-DD-name-of-post.ext.&lt;/p&gt;
 
