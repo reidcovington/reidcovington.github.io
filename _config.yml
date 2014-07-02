@@ -1,7 +1,7 @@
 # Site settings
-title: Your awesome title
+title: "'Cat'.concat('Man')"
 email: your-email@domain.com
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+description: "'Cat'.concat('Man') is the official start-up got frisky with programming and had a djing baby blog of Reid Covington, the real CatMan."
 baseurl: ""
 url: "http://yourdomain.com"
 twitter_username: jekyllrb
