@@ -409,3 +409,19 @@ a:visited { color: #205caa; }
     margin: 0 0 15px; }
 
 }
+
+
+.photo {
+    width: 300px;
+    text-align: center;
+  }
+  .photo .ui-widget-header {
+    margin: 1em 0;
+  }
+  .map {
+    width: 350px;
+    height: 350px;
+  }
+  .ui-tooltip {
+    max-width: 350px;
+  }
