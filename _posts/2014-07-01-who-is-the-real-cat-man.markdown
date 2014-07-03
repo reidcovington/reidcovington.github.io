@@ -5,7 +5,7 @@ date:   2014-07-01
 categories: jekyll update
 ---
 "Do you have a dog?" Asked the woman in the elevator. <br>
-"No. I have 2 cats." <br>
+<a href='#'>"No. I have 2 cats."</a><br>
 "Oh," she exclaimed and exchanged aroused glances with her friend. “It’s hard to find a good **_cat man_**…” <br>
 
 I wasn't always a CatMan though. It's been a long journey to get here. Let me give you the high-level stack-trace.
