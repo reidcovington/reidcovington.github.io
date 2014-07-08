@@ -4,7 +4,7 @@ $(document).ready(function(){
     content: function(){
     var element = $( this );
     var title = element.attr( 'title' );
-      return '<img src="/assets/' + title + '.jpg">';
+      return '<img src="/assets/' + title + '">';
       }
     });
 });
