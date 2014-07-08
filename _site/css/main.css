@@ -9,7 +9,7 @@
 html, body { height: 100%; }
 
 body {
-  font-family: avenir;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 300;
@@ -410,18 +410,13 @@ a:visited { color: #205caa; }
 
 }
 
+.tooltip {
+    /*color: coral;*/
+    background-color: #FFF5EE;
+}
 
-.photo {
-    width: 300px;
-    text-align: center;
-  }
-  .photo .ui-widget-header {
-    margin: 1em 0;
-  }
-  .map {
-    width: 350px;
-    height: 350px;
-  }
-  .ui-tooltip {
-    max-width: 350px;
-  }
+.ui-tooltip {
+  text-align: center;
+  border-radius: 20px;
+}
+
