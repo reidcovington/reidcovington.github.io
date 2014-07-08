@@ -1,6 +1,11 @@
 $(document).ready(function(){
-  // $( document ).tooltip({
-    $('#2cats').tooltip({
-    content: '<img src="/assets/2cats.jpg" />'
+  $( document ).tooltip({
+    toggle:   'fade',
+    content: function(){
+    var element = $( this );
+    var title = element.attr( 'title' );
+      return '<img src="/assets/' + title + '">';
+      }
     });
 });
+
