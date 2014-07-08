@@ -8,7 +8,7 @@ categories: jekyll update
 <span class='tooltip' title='2cats.jpg'>"No. I have 2 cats."</span><br>
 "Oh," she exclaimed and exchanged aroused glances with her friend. “It’s hard to find a good **_cat man_**…” <br>
 
-I wasn't always a CatMan though. It's been a long journey to get here. Let me give you the high-level stack-trace.
+I wasn't always a CatMan though. It's been a long journey to get here (and I've got an even longer journey ahead). Let me give you the high-level stack-trace though.
 
 I guess it all started in a boardroom in Shanghai. I was sitting across the table from a portly Chinese entrepreneur who was saying something to the effect of “Life, is all about creation.” And I thought, _YES_! I subsequently quit my job in finance, moved back to NYC, and started up <a href='http://www.shopcube.com'>ShopCube.com</a>.
 
