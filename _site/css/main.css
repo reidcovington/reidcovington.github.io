@@ -18,7 +18,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: 400; }
 
-a         { color: #2a7ae2; text-decoration: none; }
+a         { color: #2a7ae2; text-decoration: none; font-weight: bold }
 a:hover   { color: #000; text-decoration: underline; }
 a:visited { color: #205caa; }
 
@@ -412,7 +412,14 @@ a:visited { color: #205caa; }
 
 .tooltip {
     /*color: coral;*/
-    background-color: #FFF5EE;
+    background-color: #dbe9ff;
+    /*border-radius: 5px;*/
+}
+
+.tooltip:hover {
+    background-color: #dfdbff;
+    color: white;
+
 }
 
 .ui-tooltip {
