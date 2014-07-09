@@ -5,14 +5,14 @@ date:   2014-07-01
 categories: jekyll update
 ---
 "Do you have a dog?" Asked the woman in the elevator. <br>
-<span class='tooltip' title='2cats.jpg'>"No. I have 2 cats."</span><br>
+<span class='tooltip' title='twocats.jpg'>"No. I have 2 cats."</span><br>
 "Oh," she exclaimed and exchanged aroused glances with her friend. “It’s hard to find a good **_cat man_**…” <br>
 
 I wasn't always a CatMan though. It's been a long journey to get here (and I've got an even longer journey ahead). Let me give you the high-level stack-trace though.
 
 I guess it all started in a boardroom in Shanghai. I was sitting across the table from a portly Chinese entrepreneur who was saying something to the effect of “Life, is all about creation.” And I thought, _YES_! I subsequently quit my job in finance, moved back to NYC, and started up <a href='http://www.shopcube.com'>ShopCube.com</a>.
 
-That first year was cinematic. I had absolutely no idea what I was doing. Everyday was 20-hour-days that felt like the last 30 minutes of Zero Dark Thirty – <span class='tooltip' title='zdt1.jpg'>where you know that Osama is gonna get wacked but the suspense of _is this shit happening for real_ is eating away at your skin…</span> Well, it was happening for real, and it was exhilarating. I quickly discovered that taking a company from inception, to launching it with a 15,000 user-base, and doubling that user-base in the first year, all without spending a dollar on marketing got me FIRED UP - you know, <span class='tooltip' title='sienna.gif'>never need to sleep because life is so good you can taste it in your spit</span> - FIRED UP.
+That first year was cinematic. I had absolutely no idea what I was doing. Everyday was 20-hour-days that felt like the last 30 minutes of Zero Dark Thirty – <span class='tooltip' title='zdt.jpg'>where you know that Osama is gonna get wacked but the suspense of _is this shit happening for real_ is eating away at your skin…</span> Well, it was happening for real, and it was exhilarating. I quickly discovered that taking a company from inception, to launching it with a 15,000 user-base, and doubling that user-base in the first year, all without spending a dollar on marketing got me FIRED UP - you know, <span class='tooltip' title='sienna.gif'>never need to sleep because life is so good you can taste it in your spit</span> - FIRED UP.
 
 But I will be the first to admit that I, we, made a lot of mistakes. Too many to list. The majority of them were honest, naïve inefficiencies that we were able to address and overcome with relative ease. One crucial error in judgment, however, the negative consequences of which we are still dealing with, was the decision to outsource our development. It seems reasonable right? Neither my partner nor I had a technical background and our third partner, the CTO, lived in Israel and was confident that his Israeli team was comparable to any local talent at a quarter of the price. <span class='tooltip' title='cake-eating.jpg'>Sweet I thought</span>.
 
