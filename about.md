@@ -12,5 +12,5 @@ And as I am just a dreamer who loves to build and grow meaningful full-stack web
 
 Not every post on this blog is going to change the world (or even your opinion). But as they say, <span class='tooltip' title='predict.jpg'>the best way to predict the future is to invent it</span>. I hope I can share little pieces of the bricks that do change the world with you. And brick by brick we will start to build something that we can begin to be proud of. So I thank you in advance for your patience and support for me and for everyone who strives to predict a better future.
 
-Please feel free to check out this post for a little more background on how I got here and please please reach out to me at <a href="mailto:{{ site.email }}">{{ site.email }}</a> as we take this journey together.
+Please feel free to check out <a href='/jekyll/update/2014/07/01/who-is-the-real-cat-man/'>this post</a> for a little more background on how I got here and please please reach out to me at <a href="mailto:{{ site.email }}">{{ site.email }}</a> as we take this journey together.
 
