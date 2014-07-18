@@ -12,4 +12,23 @@ layout: default
   {{ content }}
   </article>
 
+  <div class="row" style="padding-bottom: 200px;">
+    <div class="small-9 small-centered columns post-navs">
+      <a href= "/" class='grow'> Back to Posts </a>
+      <div style="float: right;">
+
+        {% unless page.previous == nil %}
+          <a href="{{ page.previous.url }}" class='grow'>&#8592 {{ page.previous.title }} </a>
+        {%endunless%}
+
+        {% unless page.next == nil or page.previous == nil %}
+        <span> &nbsp | &nbsp</span>
+        {%endunless%}
+
+        {% unless page.next == nil %}
+          <a href="{{ page.next.url }}" class='grow'> {{ page.next.title }} &#8594</a>
+        {%endunless%}
+      </div>
+    </div><hr><br><br>
+
 </div>
