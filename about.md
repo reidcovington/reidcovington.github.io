@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Why? Who? How?
+title: WHY? WHO? HOW?
 permalink: /about/
 ---
 
