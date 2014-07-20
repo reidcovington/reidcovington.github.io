@@ -5,9 +5,19 @@
     <description>&#39;Cat&#39;.concat(&#39;Man&#39;) is the official start-ups got annotatedly frisky with programming and had a djing baby blog of Reid Covington, the real CatMan.</description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 18 Jul 2014 12:44:38 -0400</pubDate>
-    <lastBuildDate>Fri, 18 Jul 2014 12:44:38 -0400</lastBuildDate>
+    <pubDate>Sun, 20 Jul 2014 18:31:15 -0400</pubDate>
+    <lastBuildDate>Sun, 20 Jul 2014 18:31:15 -0400</lastBuildDate>
     <generator>Jekyll v2.1.1</generator>
+    
+      <item>
+        <title>&#39;Am I in?!&#39;... </title>
+        <description></description>
+        <pubDate>Mon, 21 Jul 2014 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/2014/07/21/am-i-in/</link>
+        <guid isPermaLink="true">http://yourdomain.com/2014/07/21/am-i-in/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Who&#39;s the Real CatMan?</title>
@@ -39,13 +49,9 @@
 
 </description>
         <pubDate>Tue, 01 Jul 2014 00:00:00 -0400</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2014/07/01/who-is-the-real-cat-man/</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2014/07/01/who-is-the-real-cat-man/</guid>
+        <link>http://yourdomain.com/2014/07/01/who-is-the-real-cat-man/</link>
+        <guid isPermaLink="true">http://yourdomain.com/2014/07/01/who-is-the-real-cat-man/</guid>
         
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
         
       </item>
     
