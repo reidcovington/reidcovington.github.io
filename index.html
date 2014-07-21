@@ -7,7 +7,7 @@ layout: default
     {% for post in site.posts %}
       <div class="single-post">
         <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | truncatewords: 5 }}</a>
         <p>{{ post.content | truncatewords: 40 }}</p>
         <br><br>
       </div>
