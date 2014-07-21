@@ -8,9 +8,9 @@ tags:
 - analytics
 ---
 
-This wasn’t my first time implementing Google Analytics, but it was my first time doing the entire process from account creation to full implementation on my own… and it couldn’t have been easier (implementing it, but verifying its implementation proved trickier, more on this later).
+This wasn’t my first time implementing Google Analytics, but it was my first time doing the entire process from account creation to full implementation on my own… and <span class='tooltip' title='easyaspie.jpg'>it couldn’t have been easier</span> (implementing it, but verifying its implementation proved trickier, more on this later).
 
-First, create a Google Analytics account. Simply follow the steps Google provides to register your website with Google Analytics, fill in your URL (including cross/sub domain tracking if your home page is not the same as your base url; ex: if www.reidcovington.com redirected to www.reidcovington.com/index.html), create 1 simple `view` that will be where you can view your analytics, and then Google Analytics will give you a JavaScript Snippet with your unique tracking code to embed everywhere you want GA to track:
+First, create a Google Analytics account ( < 5min). Simply follow the steps Google provides to register your website with Google Analytics, fill in your URL (including cross/sub domain tracking if your home page is not the same as your base url; ex: if www.reidcovington.com redirected to www.reidcovington.com/index.html), create 1 simple `view` that will be where you can view your analytics, and then Google Analytics will give you a JavaScript Snippet with your unique tracking code to embed everywhere you want GA to track:
 
 {% highlight javascript %}
   <script>
@@ -25,32 +25,33 @@ First, create a Google Analytics account. Simply follow the steps Google provide
 </script>
 {% endhighlight %}
 
-To keep things modular and save yourself a lot of work, follow Google’s optional dynamic implementation advice (Use a common include or template to paste the code above instead of manually adding it to every page.
-) and put this code in one of Jekyll’s includes files: `_includes/google_analytics.html`.
-Finally, include this tracking code on all of the pages of your website by modifying the `file_layouts/head.html` to include the line:
+To keep things modular and save yourself a lot of work, follow Google’s optional dynamic implementation advice `Use a common include or template to paste the code above instead of manually adding it to every page`
+and put your JS tracking snippet in a Jekyll’s includes file named: `_includes/google_analytics.html`.
+Finally, include your tracking code on all of the pages of your website by modifying the `file_layouts/head.html` to include the line:
 {% highlight html %}
 {% raw %}
   {% include google_analytics.html %}
 {% endraw %}
 {% endhighlight %}
 
-Note: the JavaScript code GA gives you should not be altered in any way and should be placed directly before the closing `</head>` tag per GA’s instructions. Check this by viewing your source code once implemented or take a peak at mine using the developer view.
+Note: the JavaScript code GA gives you should not be altered in any way and should be placed directly before the closing `</head>` tag per GA’s instructions. Check this by viewing your source code once implemented or <span class='tooltip' title='googleansource.png'>take a peek at mine using the developer view</span>.
 
-Boom, I successfully created a new GA account, set up the basic necessary account settings, and implemented GA in less time than I run a 5k (that’s less than 18:52 seconds!)! I am cookin with gas, or so I thought. Just to be double sure my GA was implemented properly so that Google wouldn’t miss counting the 33 times I would likely visit the site before the days end (always making sure to click a post link so as to keep my bounce rate low) I followed the steps found <a href='https://support.google.com/analytics/answer/1008083?hl=en'>here - to make sure my tracking code had been implemented properly</a>. This leads you through a process of signing into your `account`, going to `admin`, and checking the `Tracking Info/ Tracking Code` status message to see if it says `tracking installed`.
+Boom, I successfully created a new GA account, set up the basic necessary account settings, and implemented GA in less time than I run a 5k (that’s less than 18:52 seconds!)! <span class='tooltip' title='zoolander-gas-fight-o.gif'>I am cookin with gas, or so I thought</span>. Just to be double sure my GA was implemented properly so that Google wouldn’t miss counting the 33 times I would likely visit the site before the days end (always making sure to click a post link so as to keep my bounce rate low) I followed the steps found <a href='https://support.google.com/analytics/answer/1008083?hl=en'>here - to make sure my tracking code had been implemented properly</a>. This leads you through a process of signing into your `account`, clicking on `admin`, and checking the `Tracking Info/ Tracking Code` status message to see if it says `tracking installed` or `receiving data`.
 
-First of all, check out the super vague fucking disclaimer GA gives out in a couple different spots:
-“It can take up to 24 hours for the Google Analytics servers to update after you make a change to your tracking code, so if you’ve recently completed or changed your set up, wait before you check to see if it’s working.”
-Update what?! Update the analytics data? Update on my server? Or update the tracking status indicating GA is installed as I was currently trying to discern per the help topic? I didn’t really and still don’t know what this is referring to. Isn’t kinda bush league that a company of Google’s caliber repeatedly makes such vague remarks. I even googled to try and figure out what google meant (haha), but its pretty unclear across the board.
-Well anyway, there I was looking at the `Tracking Info/ Tracking Code` status message, which said: `Status: Tracking Not Installed`. The next 3 words out of my mouth are the 3 words that no man ever wants to say and/or even think: “Am I in?!” I’m looking at my fucking source code and everything is exactly the way it should be - so what the eff Google!
+First of all, check out the super vague fucking disclaimer GA gives out in a couple different spots:<br>
+“It can take up to 24 hours for the Google Analytics servers to update after you make a change to your tracking code, so if you’ve recently completed or changed your set up, wait before you check to see if it’s working.”<br>
+Update what?! Update the analytics data? Update to my server? Or update the tracking status indicating GA is installed as I was currently trying to discern per the help topic? I didn’t really and still don’t know what this is referring to. It's kinda <span class='tooltip' title='bushleague.jpg'>bush league</span> that a company of Google’s caliber repeatedly makes such vague remarks. I even googled to try and figure out what google meant (haha), but its pretty unclear across the board.
+So there I was looking at the `Tracking Info/ Tracking Code` status message, which said: <span class='tooltip' title='trackingnotinstalled.png'>Status: Tracking Not Installed</span>. The next 3 words out of my mouth are the 3 words that no man ever wants to say and/or even think: <span class='tooltip' title='amiin1.jpg'>_“Am I in?!”_</span> I’m looking at my fucking source code and everything is exactly the way it should be - so what the eff Google!
 
-Fast forward 2 completely wasted hours of my life later, after googling trying to figure out about this 24 hour update thing and other googles like “How long does it take for Google Analytics to start working” and “How long does it take for Google Analytics tracking code Status to update” etc. Nada. I even installed Google Analytics Debugger, a super awesome Chrome extension for debugging GA, and, to the best of my pretty decent reasoning abilities, what I was seeing looked like GA was installed:
+Fast forward <span class='tooltip' title='amiin.jpg'>2 completely wasted hours of my life</span> later, after googling trying to figure out about this 24 hour update thing and other googles like “How long does it take for Google Analytics to start working” and “How long does it take for Google Analytics tracking code Status to update” etc. Nada. I even installed Google Analytics Debugger, a super awesome Chrome extension for debugging GA, and, to the best of my pretty decent reasoning abilities, what I was seeing looked like GA was installed:<br><br>
+<img src='/assets/chromedebugger.jpg' alt='chrome debugger screen shot'>
 
-Yet, there I was on my GA account looking at the same `Not Installed` (last checked at `Time.Now`) message.
-Well, it wasn’t until I read through this entire message thread where some dude was having an actual installation problem, but then some other dude was having second guessing syndrome like myself and finally the moderator says the following: “The tracking status check is a separate check done by the system. It doesn't update automatically the moment you install the tracking code
+Yet, there I was on my GA account looking at the same `Not Installed` (last checked at `Time.Now`) message.<br>
+It wasn’t until I read through <a href='https://productforums.google.com/forum/#!topic/analytics/EZlRmgOCRew'>this entire message thread</a> where some dude was having an actual installation problem, but then some other dude was having second-guessing syndrome like myself and finally the moderator said the following:<br> “The tracking status check is a separate check done by the system. It doesn't update automatically the moment you install the tracking code
 It can take a few hours up to 36hrs (and some platforms it can even take up to 72hrs).
-Sometimes it doesn’t update at all even when the code is obviously installed and working and data has begun to appear in your account.”
+Sometimes it doesn’t update at all even when the code is obviously installed and working and data has begun to appear in your account.”<br>
 Duuude! Maaaybe it should say that somewhere near the tracking message status instead of saying directly underneath it that it was last checked at exactly the current time.
 
-Still having a panic attack because you really still haven’t technically verified that your shit is working? The best thing to do, as the moderator finally advises, is to go on to your blog, and then log onto your GA account and then go to reporting, real-time and you will see your little old lonely self as the 1 active users on the site ☺
+Still having a panic attack because you really still haven’t technically verified that your shit is working? The best thing to do, <a href='https://productforums.google.com/forum/#!topic/analytics/EZlRmgOCRew'>as the moderator finally advises</a>, is to go on to your blog, and then log onto your GA account and then go to reporting, real-time and you will see your little old lonely self as the `1 active users` (c'mon google - no dynamic pluralization?!) on your site ☺
 
-Anyway, its super easy to create and implement GA. And, if you feel like you’re in, you are. 100% of the time in.
+Anyway, its super easy to create and implement GA. And, if you <span class='tooltip' title='amiin.jpg'>feel like you’re in, you are. 100% of the time in</span>.
