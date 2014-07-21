@@ -2,6 +2,12 @@
 layout: post
 title:  "Who's the Real CatMan?"
 date:   2014-07-01
+tags:
+- cats
+- startups
+- shopcube
+- outsourcing
+- devbootcamp
 ---
 "Do you have a dog?" Asked the woman in the elevator. <br>
 <span class='tooltip' title='twocats.jpg'>"No. I have 2 cats."</span><br>

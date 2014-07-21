@@ -12,13 +12,23 @@ layout: default
   {{ content }}
   </article>
 
+  <div class='tags'>
+
+    <ul>
+      Tags:
+      {% for tag in page.tags %}
+        <li class="tag_list"><a href="/tag/{{ tag }}">{{ tag }}</a></li>
+      {% endfor %}
+    </ul>
+  </div><br>
+
   <div class="row" style="padding-bottom: 200px;">
     <div class="small-9 small-centered columns post-navs">
       <a href= "/" class='grow'> Back to Posts </a>
       <div style="float: right;">
 
         {% unless page.previous == nil %}
-          <a href="{{ page.previous.url }}" class='grow'>&#8592 {{ page.previous.title }} </a>
+          <a href="{{ page.previous.url }}" class='grow'>&#8592 {{ page.previous.title | truncatewords: 5 }} </a>
         {%endunless%}
 
         {% unless page.next == nil or page.previous == nil %}
@@ -26,7 +36,7 @@ layout: default
         {%endunless%}
 
         {% unless page.next == nil %}
-          <a href="{{ page.next.url }}" class='grow'> {{ page.next.title }} &#8594</a>
+          <a href="{{ page.next.url }}" class='grow'> {{ page.next.title | truncatewords: 5 }} &#8594</a>
         {%endunless%}
       </div>
     </div><hr><br>
