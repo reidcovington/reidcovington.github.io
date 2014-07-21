@@ -12,6 +12,16 @@ layout: default
   {{ content }}
   </article>
 
+  <div class='tags'>
+
+    <ul class="tag_list">
+      Tags:
+            {% for tag in page.tags %}
+              <li class="tag_list_in_post"><a href="/tag/{{ tag }}">{{ tag }}</a></li>
+            {% endfor %}
+    </ul>
+  </div><br>
+
   <div class="row" style="padding-bottom: 200px;">
     <div class="small-9 small-centered columns post-navs">
       <a href= "/" class='grow'> Back to Posts </a>
