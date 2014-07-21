@@ -14,11 +14,11 @@ layout: default
 
   <div class='tags'>
 
-    <ul class="tag_list">
+    <ul>
       Tags:
-            {% for tag in page.tags %}
-              <li class="tag_list_in_post"><a href="/tag/{{ tag }}">{{ tag }}</a></li>
-            {% endfor %}
+      {% for tag in page.tags %}
+        <li class="tag_list"><a href="/tag/{{ tag }}">{{ tag }}</a></li>
+      {% endfor %}
     </ul>
   </div><br>
 
@@ -28,7 +28,7 @@ layout: default
       <div style="float: right;">
 
         {% unless page.previous == nil %}
-          <a href="{{ page.previous.url }}" class='grow'>&#8592 {{ page.previous.title }} </a>
+          <a href="{{ page.previous.url }}" class='grow'>&#8592 {{ page.previous.title | truncatewords: 7 }} </a>
         {%endunless%}
 
         {% unless page.next == nil or page.previous == nil %}
@@ -36,7 +36,7 @@ layout: default
         {%endunless%}
 
         {% unless page.next == nil %}
-          <a href="{{ page.next.url }}" class='grow'> {{ page.next.title }} &#8594</a>
+          <a href="{{ page.next.url }}" class='grow'> {{ page.next.title | truncatewords: 7 }} &#8594</a>
         {%endunless%}
       </div>
     </div><hr><br>
