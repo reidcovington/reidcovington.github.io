@@ -5,12 +5,12 @@
     <description>&#39;Cat&#39;.concat(&#39;Man&#39;) is the official start-ups got annotatedly frisky with programming and had a djing baby blog of Reid Covington, the real CatMan.</description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 21 Jul 2014 10:13:11 -0400</pubDate>
-    <lastBuildDate>Mon, 21 Jul 2014 10:13:11 -0400</lastBuildDate>
+    <pubDate>Mon, 21 Jul 2014 10:15:00 -0400</pubDate>
+    <lastBuildDate>Mon, 21 Jul 2014 10:15:00 -0400</lastBuildDate>
     <generator>Jekyll v2.1.1</generator>
     
       <item>
-        <title>&#39;Am I in?!&#39;... </title>
+        <title>&#39;Am I in?!&#39;...Creating and implimenting Google Analytics with Jekyll + verifying its presence</title>
         <description></description>
         <pubDate>Mon, 21 Jul 2014 00:00:00 -0400</pubDate>
         <link>http://yourdomain.com/2014/07/21/am-i-in/</link>
