@@ -4,7 +4,7 @@ title: WHY? WHO? HOW?
 permalink: /about/
 ---
 
-Technological innovation continues to accelerate at previously considered unsustainable levels. Yet, <span class='tooltip' title='polarized.jpg'>the American people haven’t been this polarized since the Civil War</span>(<a href="http://io9.com/its-been-150-years-since-the-u-s-was-this-politically-1590076355">article</a>). The education system, secondary especially, but primary as well, is failing us. Sociological and cultural epidemics run rampant. We’re drowning (not like the <a href="https://www.youtube.com/watch?v=AbB3z2fZ7PM&feature=kp">Avicii song</a>).
+Technological innovation continues to accelerate at previously considered unsustainable levels. Yet, <span class='tooltip' title='polarized.jpg'>the American people haven’t been this polarized since the Civil War</span>(<a href="http://io9.com/its-been-150-years-since-the-u-s-was-this-politically-1590076355">article</a>). The education system, secondary especially, but primary as well, is failing us (<a href="http://www.foreignaffairs.com/articles/139113/jal-mehta/why-american-education-fails">article</a>). Sociological and cultural epidemics run rampant. We’re drowning (not like the <a href="https://www.youtube.com/watch?v=AbB3z2fZ7PM&feature=kp">Avicii song</a>).
 
 Listen, please don’t take this the wrong way. I am merely setting the table for what I believe is an unprecedented opportunity to make massive, meaningful changes. And I believe <span class='tooltip' title='techweapon.jpg'>technology is the weapon that we will use to do that</span>.
 
