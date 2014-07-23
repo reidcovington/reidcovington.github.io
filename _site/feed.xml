@@ -5,8 +5,8 @@
     <description>&#39;Cat&#39;.concat(&#39;Man&#39;) is the official start-ups got annotatedly frisky with programming and had a djing baby blog of Reid Covington, the real CatMan.</description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 21 Jul 2014 14:29:50 -0400</pubDate>
-    <lastBuildDate>Mon, 21 Jul 2014 14:29:50 -0400</lastBuildDate>
+    <pubDate>Mon, 21 Jul 2014 17:57:53 -0400</pubDate>
+    <lastBuildDate>Mon, 21 Jul 2014 17:57:53 -0400</lastBuildDate>
     <generator>Jekyll v2.1.1</generator>
     
       <item>
@@ -42,7 +42,7 @@ Finally, include your tracking code on all of the pages of your website by modif
 Update what?! Update the analytics data? Update to my server? Or update the tracking status indicating GA is installed as I was currently trying to discern per the help topic? I didn’t really and still don’t know what this is referring to. It’s kinda &lt;span class=&quot;tooltip&quot; title=&quot;bushleague.jpg&quot;&gt;bush league&lt;/span&gt; that a company of Google’s caliber repeatedly makes such vague remarks. I even googled to try and figure out what google meant (haha), but its pretty unclear across the board.
 So there I was looking at the &lt;code&gt;Tracking Info/ Tracking Code&lt;/code&gt; status message, which said: &lt;span class=&quot;tooltip&quot; title=&quot;trackingnotinstalled.png&quot;&gt;Status: Tracking Not Installed&lt;/span&gt;. The next 3 words out of my mouth are the 3 words that no man ever wants to say and/or even think: &lt;span class=&quot;tooltip&quot; title=&quot;amiin1.jpg&quot;&gt;&lt;em&gt;“Am I in?!”&lt;/em&gt;&lt;/span&gt; I’m looking at my fucking source code and everything is exactly the way it should be - so what the eff Google!&lt;/p&gt;
 
-&lt;p&gt;Fast forward &lt;span class=&quot;tooltip&quot; title=&quot;amiin.jpg&quot;&gt;2 completely wasted hours of my life&lt;/span&gt; later, after googling trying to figure out about this 24 hour update thing and other googles like “How long does it take for Google Analytics to start working” and “How long does it take for Google Analytics tracking code Status to update” etc. Nada. I even installed &lt;a href=&quot;https://chrome.google.com/webstore/detail/google-analytics-debugger/jnkmfdileelhofjcijamephohjechhna?hl=en&quot;&gt;Google Analytics Debugger&lt;/a&gt;, a super awesome Chrome extension for debugging GA, and, to the best of my pretty decent reasoning abilities, what I was seeing looked like GA was installed:&lt;br /&gt;&lt;br /&gt;
+&lt;p&gt;Fast forward &lt;span class=&quot;tooltip&quot; title=&quot;wastetime.jpg&quot;&gt;2 completely wasted hours of my life&lt;/span&gt; later, after googling trying to figure out about this 24 hour update thing and other googles like “How long does it take for Google Analytics to start working” and “How long does it take for Google Analytics tracking code Status to update” etc. Nada. I even installed &lt;a href=&quot;https://chrome.google.com/webstore/detail/google-analytics-debugger/jnkmfdileelhofjcijamephohjechhna?hl=en&quot;&gt;Google Analytics Debugger&lt;/a&gt;, a super awesome Chrome extension for debugging GA, and, to the best of my pretty decent reasoning abilities, what I was seeing looked like GA was installed:&lt;br /&gt;&lt;br /&gt;
 &lt;img src=&quot;/assets/chromedebugger.jpg&quot; alt=&quot;chrome debugger screen shot&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Yet, there I was on my GA account looking at the same &lt;code&gt;Not Installed&lt;/code&gt; (last checked at &lt;code&gt;Time.Now&lt;/code&gt;) message.&lt;br /&gt;
