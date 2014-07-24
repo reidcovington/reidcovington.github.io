@@ -5,9 +5,47 @@
     <description>&#39;Cat&#39;.concat(&#39;Man&#39;) is the official start-ups got annotatedly frisky with programming and had a djing baby blog of Reid Covington, the real CatMan.</description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 23 Jul 2014 11:29:13 -0400</pubDate>
-    <lastBuildDate>Wed, 23 Jul 2014 11:29:13 -0400</lastBuildDate>
+    <pubDate>Thu, 24 Jul 2014 17:31:23 -0400</pubDate>
+    <lastBuildDate>Thu, 24 Jul 2014 17:31:23 -0400</lastBuildDate>
     <generator>Jekyll v2.1.1</generator>
+    
+      <item>
+        <title>Programmer vs. API Builder Mindset</title>
+        <description>&lt;p&gt;As is the case with most introspective, renaissance men such as &lt;span class=&quot;tooltip&quot; title=&quot;renaissanceman.jpg&quot;&gt;myself&lt;/span&gt; (kidding! But no really…) I’m really into thinking about mindsets. One examination of different mindsets that has gotten a lot of attention recently, and deservingly so as it’s probably more important to lifelong development and happiness than anything else (bold statement… but true) is the examination of the growth vs fixed mindset. But that conversation is for a different time! (Until then, look at everything as an opportunity for self improvement rather than a weakness, a failure, “just the way you are” or any other bullshit). Today, I want to talk about another important mindset transformation: the programmer vs API builder mindset (shout out to &lt;a href=&quot;http://stevecorona.com/&quot;&gt;Steve Corona&lt;/a&gt; and the &lt;a href=&quot;http://rubyrogues.com/&quot;&gt;Ruby Rougues&lt;/a&gt; podcast team for discussing this in their awesome &lt;a href=&quot;http://rubyrogues.com/162-rr-scaling-rails-with-steve-corona/&quot;&gt;podcast&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;A really common problem I have in almost anything I do (and I don’t think I’m the only one who has this problem) is that I look at everything I am attempting as if I am &lt;span class=&quot;tooltip&quot; title=&quot;tajmahal.jpg&quot;&gt;building the Taj Mahal&lt;/span&gt;. Whether its writing a blog post, going to the gym, cleaning my apartment, or writing a web app, I always have the tendency to think about whatever I’m doing as a singular, life-changing endeavor. If I’m going to write a blog post it’s going to rival fucking Hemmingway (think &lt;a href=&quot;http://blogs.baruch.cuny.edu//greatworksspring2014/files/2014/03/Hills-Like-White-Elephants-Ernest-Hemingway.pdf&quot;&gt;Hills Like White Elephants&lt;/a&gt;). If I’m going to go the gym I’m going to &lt;span class=&quot;tooltip&quot; title=&quot;kg.jpg&quot;&gt;crush weights like KG&lt;/span&gt; and &lt;span class=&quot;tooltip&quot; title=&quot;lance.jpg&quot;&gt;spin like Lance&lt;/span&gt; (while doping!). If I’m going to clean my apartment, I’m going scrub toilets, vacuum, and color sort my button-downs. And if I’m going to write a web app I’m going to &lt;span class=&quot;tooltip&quot; title=&quot;swordfish.gif&quot;&gt;spew fucking lightning bolts from my fucking fingers until I’ve hacked the Department of Defense Hugh Jackman style circa Swordfish&lt;/span&gt;.&lt;/p&gt;
+
+&lt;p&gt;While each of these extremist approaches can and have lead to lots of success for me, they are not necessarily the right approach and very rarely are the most efficient approach. What ends up happening is that you get fixated on perfection, which holds you back from taking small steps towards your end goals. Want to get in better shape? It’s not about the perfect workout – it’s about banging out 20 push-ups, 10 times a day and nailing a 15-minute run. Rome wasn’t built in a day, ya know? You think the romans were just like oh yeah let’s build this &lt;span class=&quot;tooltip&quot; title=&quot;roman.jpg&quot;&gt;sick set up with a  Coliseum and a Pantheon&lt;/span&gt; and all this other insane shit. No way dude. They were like, we need a fighting area so they built a mini arena - and then they were like, people seem to really like this so let’s build some seating to make it easier to watch - and then they were like, whoa people really dig this, let’s build an entire stadium with royal boxes and training archives and even more seating until one day they had the Coliseum. Each step was taken individually and each piece they built serves a purpose of its own and could exist independently of the rest. They could, although it might be a little weird, extract out the fighting arena and put it right in the middle of the Pantheon.&lt;/p&gt;
+
+&lt;p&gt;This line of thinking should be applied to coding. I’m not just talking about breaking up writing an application into several steps, although you should obviously do that. I’m talking about thinking about each piece of your application as its own mini application… or a separate API. This is the shift from the “programmer mindset”, where you think: how do I code this up into an entire application, to an “API builder mindset”, where you think: how do I make this search bar API or this game logic API and then just tie your APIs together. Once you’ve made this incredibly powerful shift from programmer to API builder it makes your larger application/API much more versatile and makes managing inevitably increasing levels of complexity as you scale possible, even, dare I say, &lt;span class=&quot;tooltip&quot; title=&quot;fun.jpg&quot;&gt;fun&lt;/span&gt;!&lt;/p&gt;
+
+&lt;p&gt;I mean, if you take a step back, everything is really just an API (&lt;span class=&quot;tooltip&quot; title=&quot;whoa.jpg&quot;&gt;whoaaa&lt;/span&gt;) and we, as developers, are all just building APIs of varying levels of complexity tied to varying numbers of other APIs. As long as you can publish an interface that your users expect in some format, whether it’s a URL (a URL is just an API right?) or a REST API – as long as you publish this saying this is our contract of what we are going to respond to then it doesn’t matter who serves it, or what language your serving it in (whether it be rails, java, c, php, go, node, haskcal, or … brainfuck etc), or where you are serving it (whether it be a repository on github or a program or a service you have running on your own machine). This way you can begin to think about development as building out small, reusable services (APIs) rather than one tightly coupled application.&lt;/p&gt;
+
+&lt;p&gt;And once you begin to really embrace this API builder mindset it has lots of benefits for the project you’re working on. Your technology is no longer simply one application or one API, but a series of versatile APIs that can be customized and plugged in to other people’s APIs depending on their needs, which is a powerful, momentum-gathering, scalable notion (ever heard of this thing called the &lt;span class=&quot;tooltip&quot; title=&quot;worldwideweb.jpg&quot;&gt;world wide web&lt;/span&gt;?!).&lt;/p&gt;
+
+&lt;p&gt;End of regular reading. Nerds read on!&lt;/p&gt;
+
+&lt;p&gt;A simple example of this is a project I am currently working on called SmartiPants. SmartiPants is a cognitive self-improvement game and research aid. It provides users with a simple, dynamic platform to improve their memory by playing n-Back, while also providing researchers with a powerful data collection tool. But there are tons of different applications or variations of how you might want to use nBack (for data collection or for fun). So, my team and I thought, why not build an nBack game log API (ruby gem) and then anyone can simply plug into that API and use it with whatever views they have built and apply it for their own varying business logics.&lt;/p&gt;
+
+&lt;p&gt;We extracted the Game Model from the Javascript MVC portion of our codebase and turned it into a stand alone nBack Game logic Ruby Gem.&lt;/p&gt;
+
+&lt;p&gt;Game Model from SmartiPantsGame.com:&lt;/p&gt;
+
+&lt;p&gt;nBack Game Logic Ruby Gem API:&lt;/p&gt;
+
+&lt;p&gt;It really wasn’t very difficult at all (shout out to my boy Siyan for taking the lead on this). The simple key is, as I’ve reiterated, taking small pieces of code that could exist on their own and converting them to their own, self-sufficient APIs. By making this mental transition to breaking everything down into small object oriented APIs suddenly the whole world becomes a network of tiny, linked together APIs, which together make up this incredibly complex thing called… planet earth. Okay, I’ve got a little bit of a &lt;span class=&quot;tooltip&quot; title=&quot;dramatics.jpg&quot;&gt;flare for the dramatics&lt;/span&gt;, but it is pretty fucking cool, ya?!&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 24 Jul 2014 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/2014/07/24/programmer-vs-api-builder-mindset/</link>
+        <guid isPermaLink="true">http://yourdomain.com/2014/07/24/programmer-vs-api-builder-mindset/</guid>
+        
+        <category>code</category>
+        
+        <category>API</category>
+        
+        
+      </item>
     
       <item>
         <title>&#39;Am I in?!&#39;...Implementing Google Analytics with Jekyll and verifying the implimentation</title>
