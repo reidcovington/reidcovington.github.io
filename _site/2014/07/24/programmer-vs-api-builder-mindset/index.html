@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Programmer vs. API Builder Mindset</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="'Cat'.concat('Man') is the official start-ups got annotatedly frisky with programming and had a djing baby blog of Reid Covington, the real CatMan.">
+    <link rel="canonical" href="http://yourdomain.com/2014/07/24/programmer-vs-api-builder-mindset/">
+
+    <!-- Custom CSS -->
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+    <script src="/javascript/main.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-52973139-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+</head>
+
+
+    <body>
+
+    <header class="site-header">
+
+  <div class="wrap">
+    <div id="title">
+      <a class="site-title" href="/"><span class='yellow catman'>'Cat'</span><span class='white catman'>.</span><span class='eggshell catman'>concat</span><span class='white catman'>(</span><span class='yellow catman'>'Man'</span><span class='white catman'>):</span><span class='eggshell catman lifehacking'> Life Hacking</span></a>
+    </div>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 18 15" enable-background="new 0 0 18 15" xml:space="preserve">
+          <path fill="#505050" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0
+            h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#505050" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484
+            h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#505050" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0
+            c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        
+          
+            <a class="page-link" href="/about/">WHY? WHO? HOW?</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrap">
+      <div class="post">
+
+  <header class="post-header">
+    <h1>Programmer vs. API Builder Mindset</h1>
+    <p class="meta">Jul 24, 2014</p>
+  </header>
+
+  <article class="post-content">
+  <p>As is the case with most introspective, renaissance men such as <span class="tooltip" title="renaissanceman.jpg">myself</span> (kidding! But no really…) I’m really into thinking about mindsets. One examination of different mindsets that has gotten a lot of attention recently, and deservingly so as it’s probably more important to lifelong development and happiness than anything else (bold statement… but true) is the examination of the growth vs fixed mindset. But that conversation is for a different time! (Until then, look at everything as an opportunity for self improvement rather than a weakness, a failure, “just the way you are” or any other bullshit). Today, I want to talk about another important mindset transformation: the programmer vs API builder mindset (shout out to <a href="http://stevecorona.com/">Steve Corona</a> and the <a href="http://rubyrogues.com/">Ruby Rougues</a> podcast team for discussing this in their awesome <a href="http://rubyrogues.com/162-rr-scaling-rails-with-steve-corona/">podcast</a>).</p>
+
+<p>A really common problem I have in almost anything I do (and I don’t think I’m the only one who has this problem) is that I look at everything I am attempting as if I am building the <span class="tooltip" title="tajmahal.jpg">Taj Mahal</span>. Whether its writing a blog post, going to the gym, cleaning my apartment, or writing a web app, I always have the tendency to think about whatever I’m doing as a singular, life-changing endeavor. If I’m going to write a blog post it’s going to rival fucking Hemmingway (think <a href="http://blogs.baruch.cuny.edu//greatworksspring2014/files/2014/03/Hills-Like-White-Elephants-Ernest-Hemingway.pdf">Hills Like White Elephants</a>). If I’m going to go the gym I’m going to <span class="tooltip" title="kg.jpg">crush weights like KG</span> and <span class="tooltip" title="lance.jpg">spin like Lance</span> (while doping!). If I’m going to clean my apartment, I’m going scrub toilets, vacuum, and color sort my button-downs. And if I’m going to write a web app I’m going to <span class="tooltip" title="swordfish.gif">spew fucking lightning bolts from my fucking fingers until I’ve hacked the Department of Defense Hugh Jackman style circa Swordfish</span>.</p>
+
+<p>While each of these extremist approaches can and have lead to lots of success for me, they are not necessarily the right approach and very rarely are the most efficient approach. What ends up happening is that you get fixated on perfection, which holds you back from taking small steps towards your end goals. Want to get in better shape? It’s not about the perfect workout – it’s about banging out 20 push-ups, 10 times a day and nailing a 15-minute run. Rome wasn’t built in a day, ya know? You think the romans were just like oh yeah let’s build this sick set up with a  Coliseum and a Pantheon and all this other insane shit. No way dude. They were like, we need a fighting area so they built a mini arena - and then they were like, people seem to really like this so let’s build some seating to make it easier to watch - and then they were like, whoa people really dig this, let’s build an entire stadium with royal boxes and training archives and even more seating until one day they had the <span class="tooltip" title="Coliseum.jpg">Coliseum</span>. Each step was taken individually and each piece they built serves a purpose of its own and could exist independently of the rest. They could, although it might be a little weird, extract out the fighting arena and put it right in the middle of the Pantheon.</p>
+
+<p>This line of thinking should be applied to coding. I’m not just talking about breaking up writing an application into several steps, although you should obviously do that. I’m talking about thinking about each piece of your application as its own mini application… or a separate API. This is the shift from the “programmer mindset”, where you think: how do I code this up into an entire application, to an “API builder mindset”, where you think: how do I make this search bar API or this game logic API and then just tie your APIs together. Once you’ve made this incredibly powerful shift from programmer to API builder it makes your larger application/API much more versatile and makes managing inevitably increasing levels of complexity as you scale possible, even, dare I say, <span class="tooltip" title="fun.jpg">fun</span>!</p>
+
+<p>I mean, if you take a step back, everything is really just an API (<span class="tooltip" title="whoa.gif">whoaaa</span>) and we, as developers, are all just building APIs of varying levels of complexity tied to varying numbers of other APIs. As long as you can publish an interface that your users expect in some format, whether it’s a URL (a URL is just an API right?) or a REST API – as long as you publish this saying this is our contract of what we are going to respond to then it doesn’t matter who serves it, or what language your serving it in (whether it be rails, java, c, php, go, node, haskcal, or … brainfuck etc), or where you are serving it (whether it be a repository on github or a program or a service you have running on your own machine). This way you can begin to think about development as building out small, reusable services (APIs) rather than one tightly coupled application.</p>
+
+<p>And once you begin to really embrace this API builder mindset it has lots of benefits for the project you’re working on. Your technology is no longer simply one application or one API, but a series of versatile APIs that can be customized and plugged in to other people’s APIs depending on their needs, which is a powerful, momentum-gathering, scalable notion (ever heard of this thing called the <span class="tooltip" title="worldwideweb.jpg">world wide web</span>?!).</p>
+
+<p>End of regular reading. Nerds read on!</p>
+
+<p>A simple example of this is a project I am currently working on called <a href="http://www.smartipantsgame.com">SmartiPants</a>. SmartiPants is a cognitive self-improvement game and research aid. It provides users with a simple, dynamic platform to improve their memory by playing <a href="http://en.wikipedia.org/wiki/N-back">n-Back</a>, while also providing researchers with a powerful data collection tool. But there are tons of different applications or variations of how you might want to use the nBack game (for data collection… for fun). So, my team and I thought, why not build an <a href="https://github.com/reidcovington/nback-gem">nBack game log API (ruby gem)</a> and then anyone can simply plug into that API and use it with whatever views they have built and apply it for their own varying business logics.</p>
+
+<p>We extracted the Game Model from the Javascript MVC portion of our codebase and turned it into a stand alone nBack Game logic Ruby Gem.</p>
+
+<p><a href="http://www.smartipantsgame.com">Game Model from SmartiPantsGame.com</a>:</p>
+
+<p><a href="https://github.com/reidcovington/nback-gem">nBack Game Logic Ruby Gem API</a>:</p>
+
+<p>It really wasn’t very difficult at all (shout out to my boy Siyan for taking the lead on this). The simple key is, as I’ve reiterated, taking small pieces of code that could exist on their own and converting them to their own, self-sufficient APIs. By making this mental transition to breaking everything down into small object oriented APIs suddenly the whole world becomes a network of tiny, linked together APIs, which together make up this incredibly complex thing called… planet earth. Okay, I’ve got a little bit of a <span class="tooltip" title="dramatics.jpg">flare for the dramatics</span>, but it is pretty fucking cool, ya?!</p>
+
+
+  </article>
+
+  <div class='tags'>
+
+    <ul>
+      Tags:
+      
+        <li class="tag_list"><a href="/tag/code">code</a></li>
+      
+        <li class="tag_list"><a href="/tag/API">API</a></li>
+      
+    </ul>
+  </div><br>
+
+  <div class="row" style="padding-bottom: 200px;">
+    <div class="small-9 small-centered columns post-navs">
+      <a href= "/" class='grow'> Back to Posts </a>
+      <div style="float: right;">
+
+        
+          <a href="/2014/07/21/am-i-in/" class='grow'>&#8592 'Am I in?!'...Implementing Google Analytics... </a>
+        
+
+        
+
+        
+      </div>
+    </div><hr><br>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'reidcovington'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrap">
+      <a class="footer-icon" href="https://github.com/reidcovington">
+          <i class="fa fa-github fa-5"></i>
+      </a>
+      <a class="footer-icon" href="https://twitter.com/reidcovington">
+          <i class="fa fa-twitter fa-5"></i>
+      </a>
+      <a class="footer-icon" href="mailto:reid@shopcube.com">
+          <i class="fa fa-envelope-o fa-5"></i>
+      </a>
+  </div>
+
+</footer>
+
+
+
+    </body>
+</html>
