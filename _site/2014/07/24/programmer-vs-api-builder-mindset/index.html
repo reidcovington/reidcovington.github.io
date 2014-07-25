@@ -115,9 +115,115 @@
 
 <p><a href="http://www.smartipantsgame.com">Game Model from SmartiPantsGame.com</a>:</p>
 
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">GameModel</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span> <span class="nx">roundAttributes</span><span class="p">,</span> <span class="nx">gameMode</span><span class="p">,</span> <span class="nx">delegate</span><span class="p">){</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">delegate</span> <span class="o">=</span> <span class="nx">delegate</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">n</span> <span class="o">=</span> <span class="nx">n</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">gameMode</span> <span class="o">=</span> <span class="nx">gameMode</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">roundAttributes</span> <span class="o">=</span> <span class="nx">roundAttributes</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">rounds</span> <span class="o">=</span> <span class="p">[];</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">makeRounds</span><span class="p">();</span>
+<span class="p">};</span>
+<span class="nx">GameModel</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">makeRounds</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">20</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">n</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">rounds</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">RoundModel</span><span class="p">(</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">roundAttributes</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nx">scoreGuess</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">attribute</span><span class="p">,</span> <span class="nx">roundIndex</span><span class="p">){</span>
+        <span class="kd">var</span> <span class="nx">pastRound</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">rounds</span><span class="p">[</span><span class="nx">roundIndex</span> <span class="o">-</span> <span class="k">this</span><span class="p">.</span><span class="nx">n</span><span class="p">];</span>
+        <span class="kd">var</span> <span class="nx">currentRound</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">rounds</span><span class="p">[</span><span class="nx">roundIndex</span><span class="p">];</span>
+        <span class="nx">currentRound</span><span class="p">[</span><span class="nx">attribute</span> <span class="o">+</span> <span class="s1">&#39;Key&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">currentRound</span><span class="p">[</span><span class="nx">attribute</span><span class="p">]</span> <span class="o">===</span> <span class="nx">pastRound</span><span class="p">[</span><span class="nx">attribute</span><span class="p">]){</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">delegate</span><span class="p">.</span><span class="nx">provideFeedback</span><span class="p">(</span><span class="nx">attribute</span><span class="p">,</span> <span class="s1">&#39;success&#39;</span><span class="p">)</span>
+            <span class="nx">currentRound</span><span class="p">[</span><span class="nx">attribute</span> <span class="o">+</span> <span class="s1">&#39;Guess&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">currentRound</span><span class="p">[</span><span class="nx">attribute</span><span class="p">]</span> <span class="o">!=</span> <span class="nx">pastRound</span><span class="p">[</span><span class="nx">attribute</span><span class="p">]){</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">delegate</span><span class="p">.</span><span class="nx">provideFeedback</span><span class="p">(</span><span class="nx">attribute</span><span class="p">,</span> <span class="s1">&#39;danger&#39;</span><span class="p">)</span>
+        <span class="p">};</span>
+    <span class="p">},</span>
+    <span class="nx">scoreNonGuess</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">attribute</span><span class="p">,</span> <span class="nx">roundIndex</span><span class="p">){</span>
+        <span class="kd">var</span> <span class="nx">pastRound</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">rounds</span><span class="p">[</span><span class="nx">roundIndex</span> <span class="o">-</span> <span class="k">this</span><span class="p">.</span><span class="nx">n</span><span class="p">];</span>
+        <span class="kd">var</span> <span class="nx">currentRound</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">rounds</span><span class="p">[</span><span class="nx">roundIndex</span><span class="p">];</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">currentRound</span><span class="p">[</span><span class="nx">attribute</span> <span class="o">+</span> <span class="s1">&#39;Key&#39;</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="p">(</span><span class="nx">currentRound</span><span class="p">[</span><span class="nx">attribute</span><span class="p">]</span> <span class="o">===</span> <span class="nx">pastRound</span><span class="p">[</span><span class="nx">attribute</span><span class="p">])){</span>
+            <span class="nx">currentRound</span><span class="p">[</span><span class="nx">attribute</span> <span class="o">+</span> <span class="s1">&#39;Guess&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nx">calculateTotalScore</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+        <span class="kd">var</span> <span class="nx">totalPoints</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">rounds</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">rounds</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">colorGuess</span><span class="p">){</span> <span class="nx">totalPoints</span><span class="o">++</span> <span class="p">};</span>
+            <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">rounds</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">soundGuess</span><span class="p">){</span> <span class="nx">totalPoints</span><span class="o">++</span> <span class="p">};</span>
+            <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">rounds</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">positionGuess</span><span class="p">){</span> <span class="nx">totalPoints</span><span class="o">++</span> <span class="p">};</span>
+        <span class="p">};</span>
+        <span class="k">return</span> <span class="nx">totalPoints</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></div>
+
 <p><a href="https://github.com/reidcovington/nback-gem">nBack Game Logic Ruby Gem API</a>:</p>
 
-<p>It really wasn’t very difficult at all (shout out to my boy Siyan for taking the lead on this). The simple key is, as I’ve reiterated, taking small pieces of code that could exist on their own and converting them to their own, self-sufficient APIs. By making this mental transition to breaking everything down into small object oriented APIs suddenly the whole world becomes a network of tiny, linked together APIs, which together make up this incredibly complex thing called… planet earth. Okay, I’ve got a little bit of a <span class="tooltip" title="dramatics.jpg">flare for the dramatics</span>, but it is pretty fucking cool, ya?!</p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">NbackGame</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">round_attributes</span><span class="p">)</span>
+    <span class="vi">@n</span> <span class="o">=</span> <span class="n">n</span>
+    <span class="vi">@game_mode</span> <span class="o">=</span> <span class="n">game_mode</span>
+    <span class="vi">@round_attributes</span> <span class="o">=</span> <span class="n">round_attributes</span>
+    <span class="vi">@rounds</span> <span class="o">=</span> <span class="o">[]</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">generate_rounds</span>
+    <span class="vi">@round_number</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="vi">@n</span> <span class="o">+</span> <span class="mi">20</span><span class="o">.</span><span class="n">times</span> <span class="k">do</span>
+      <span class="vi">@rounds</span> <span class="o">&lt;&lt;</span> <span class="no">Round</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="vi">@round_number</span><span class="p">,</span> <span class="vi">@round_attributes</span><span class="p">)</span>
+      <span class="vi">@round_number</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">evaluate_users_guess</span><span class="p">(</span><span class="n">current_round_number</span><span class="p">,</span> <span class="n">attribute</span><span class="p">)</span>
+    <span class="vi">@current_round</span> <span class="o">=</span> <span class="vi">@rounds</span><span class="o">[</span><span class="n">current_round_number</span> <span class="o">-</span> <span class="mi">1</span><span class="o">]</span>
+    <span class="vi">@nback_round</span> <span class="o">=</span> <span class="vi">@rounds</span><span class="o">[</span><span class="n">current_round_number</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="vi">@n</span><span class="o">]</span>
+
+    <span class="k">if</span> <span class="n">current_round_number</span> <span class="o">&gt;</span> <span class="vi">@n</span>
+      <span class="k">if</span> <span class="vi">@current_round</span><span class="o">.</span><span class="n">round_attributes</span><span class="o">[</span><span class="n">attribute</span><span class="o">.</span><span class="n">to_sym</span><span class="o">]</span> <span class="o">==</span> <span class="vi">@nback_round</span><span class="o">.</span><span class="n">round_attributes</span><span class="o">[</span><span class="n">attribute</span><span class="o">.</span><span class="n">to_sym</span><span class="o">]</span>
+        <span class="vi">@current_round</span><span class="o">.</span><span class="n">round_attributes</span><span class="o">[</span><span class="s2">&quot;</span><span class="si">#{</span><span class="n">attribute</span><span class="si">}</span><span class="s2">_correct&quot;</span><span class="o">.</span><span class="n">to_sym</span><span class="o">]</span> <span class="o">=</span> <span class="kp">true</span>
+      <span class="k">else</span>
+        <span class="vi">@current_round</span><span class="o">.</span><span class="n">round_attributes</span><span class="o">[</span><span class="s2">&quot;</span><span class="si">#{</span><span class="n">attribute</span><span class="si">}</span><span class="s2">_correct&quot;</span><span class="o">.</span><span class="n">to_sym</span><span class="o">]</span> <span class="o">=</span> <span class="kp">false</span>
+      <span class="k">end</span>
+    <span class="k">else</span>
+      <span class="vi">@current_round</span><span class="o">.</span><span class="n">round_attributes</span><span class="o">[</span><span class="s2">&quot;</span><span class="si">#{</span><span class="n">attribute</span><span class="si">}</span><span class="s2">_correct&quot;</span><span class="o">.</span><span class="n">to_sym</span><span class="o">]</span> <span class="o">=</span> <span class="kp">false</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">evaluate_non_response</span><span class="p">(</span><span class="n">current_round_number</span><span class="p">)</span>
+    <span class="vi">@current_round</span> <span class="o">=</span> <span class="vi">@rounds</span><span class="o">[</span><span class="n">current_round_number</span> <span class="o">-</span> <span class="mi">1</span><span class="o">]</span>
+    <span class="vi">@nback_round</span> <span class="o">=</span> <span class="vi">@rounds</span><span class="o">[</span><span class="n">current_round_number</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="vi">@n</span><span class="o">]</span>
+
+    <span class="k">if</span> <span class="n">current_round_number</span> <span class="o">&lt;</span> <span class="vi">@n</span>
+      <span class="vi">@round_attributes</span><span class="o">.</span><span class="n">each_key</span> <span class="k">do</span> <span class="o">|</span><span class="n">attribute</span><span class="o">|</span>
+        <span class="k">if</span> <span class="vi">@current_round</span><span class="o">.</span><span class="n">round_attributes</span><span class="o">[</span><span class="s2">&quot;</span><span class="si">#{</span><span class="n">attribute</span><span class="si">}</span><span class="s2">_correct&quot;</span><span class="o">.</span><span class="n">to_sym</span><span class="o">]</span> <span class="o">==</span> <span class="kp">nil</span>
+          <span class="k">if</span> <span class="vi">@current_round</span><span class="o">.</span><span class="n">round_attributes</span><span class="o">[</span><span class="n">attribute</span><span class="o">.</span><span class="n">to_sym</span><span class="o">]</span> <span class="o">!=</span> <span class="vi">@nback_round</span><span class="o">.</span><span class="n">round_attributes</span><span class="o">[</span><span class="n">attribute</span><span class="o">.</span><span class="n">to_sym</span><span class="o">]</span>
+            <span class="vi">@current_round</span><span class="o">.</span><span class="n">round_attributes</span><span class="o">[</span><span class="s2">&quot;</span><span class="si">#{</span><span class="n">attribute</span><span class="si">}</span><span class="s2">_correct&quot;</span><span class="o">.</span><span class="n">to_sym</span><span class="o">]</span> <span class="o">=</span> <span class="kp">true</span>
+          <span class="k">end</span>
+        <span class="k">end</span>
+      <span class="k">end</span>
+    <span class="k">else</span>
+      <span class="vi">@round_attributes</span><span class="o">.</span><span class="n">each_key</span> <span class="k">do</span> <span class="o">|</span><span class="n">attribute</span><span class="o">|</span>
+        <span class="k">if</span> <span class="vi">@current_round</span><span class="o">.</span><span class="n">round_attributes</span><span class="o">[</span><span class="s2">&quot;</span><span class="si">#{</span><span class="n">attribute</span><span class="si">}</span><span class="s2">_correct&quot;</span><span class="o">.</span><span class="n">to_sym</span><span class="o">]</span> <span class="o">==</span> <span class="kp">nil</span>
+          <span class="k">if</span> <span class="vi">@current_round</span><span class="o">.</span><span class="n">round_attributes</span><span class="o">[</span><span class="n">attribute</span><span class="o">.</span><span class="n">to_sym</span><span class="o">]</span> <span class="o">!=</span> <span class="vi">@nback_round</span><span class="o">.</span><span class="n">round_attributes</span><span class="o">[</span><span class="n">attribute</span><span class="o">.</span><span class="n">to_sym</span><span class="o">]</span>
+            <span class="vi">@current_round</span><span class="o">.</span><span class="n">round_attributes</span><span class="o">[</span><span class="s2">&quot;</span><span class="si">#{</span><span class="n">attribute</span><span class="si">}</span><span class="s2">_correct&quot;</span><span class="o">.</span><span class="n">to_sym</span><span class="o">]</span> <span class="o">=</span> <span class="kp">true</span>
+          <span class="k">else</span>
+            <span class="vi">@current_round</span><span class="o">.</span><span class="n">round_attributes</span><span class="o">[</span><span class="s2">&quot;</span><span class="si">#{</span><span class="n">attribute</span><span class="si">}</span><span class="s2">_correct&quot;</span><span class="o">.</span><span class="n">to_sym</span><span class="o">]</span> <span class="o">=</span> <span class="kp">false</span>
+          <span class="k">end</span>
+        <span class="k">end</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">show_round_attributes</span><span class="p">(</span><span class="n">round_number</span><span class="p">)</span>
+    <span class="vi">@rounds</span><span class="o">[</span><span class="n">round_number</span> <span class="o">-</span> <span class="mi">1</span><span class="o">].</span><span class="n">round_attributes</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></div>
+
+<p>It really wasn’t very difficult at all (shout out to my boy <a href="http://www.siyanbeverly.com/">Siyan</a> for taking the lead on this). As you can see, the core of our app, the Game Model, and its fundamental characteristics (using n value to create each round of the game with whatever attributes your game calls for + scoring each round) was easily extracted into a Ruby gem.</p>
+
+<p>The simple key is, as I’ve reiterated, taking small pieces of code that could exist on their own and converting them to their own, self-sufficient APIs. By making this mental transition to breaking everything down into small object oriented APIs suddenly the whole world becomes a network of tiny, linked together APIs, which together make up this incredibly complex thing called… planet earth. Okay, I’ve got a little bit of a <span class="tooltip" title="dramatics.jpg">flare for the dramatics</span>, but it is pretty fucking cool, ya?!</p>
 
 
   </article>
