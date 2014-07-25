@@ -27,10 +27,115 @@ We extracted the Game Model from the Javascript MVC portion of our codebase and 
 
 <a href='http://www.smartipantsgame.com'>Game Model from SmartiPantsGame.com</a>:
 {% highlight javascript %}
+function GameModel(n, roundAttributes, gameMode, delegate){
+    this.delegate = delegate;
+    this.n = n;
+    this.gameMode = gameMode;
+    this.roundAttributes = roundAttributes;
+    this.rounds = [];
+    this.makeRounds();
+};
+GameModel.prototype = {
+    makeRounds: function(){
+        for (var i = 0; i < 20 + this.n; i++){
+            this.rounds[i] = new RoundModel(i+1, this.roundAttributes);
+        }
+    },
+    scoreGuess: function(attribute, roundIndex){
+        var pastRound = this.rounds[roundIndex - this.n];
+        var currentRound = this.rounds[roundIndex];
+        currentRound[attribute + 'Key'] = true;
+        if (currentRound[attribute] === pastRound[attribute]){
+            this.delegate.provideFeedback(attribute, 'success')
+            currentRound[attribute + 'Guess'] = true;
+        } else if (currentRound[attribute] != pastRound[attribute]){
+            this.delegate.provideFeedback(attribute, 'danger')
+        };
+    },
+    scoreNonGuess: function(attribute, roundIndex){
+        var pastRound = this.rounds[roundIndex - this.n];
+        var currentRound = this.rounds[roundIndex];
+        if (!currentRound[attribute + 'Key'] && !(currentRound[attribute] === pastRound[attribute])){
+            currentRound[attribute + 'Guess'] = true;
+        }
+    },
+    calculateTotalScore: function(){
+        var totalPoints = 0;
+        for (var i = 0; i < this.rounds.length; i++){
+            if (this.rounds[i].colorGuess){ totalPoints++ };
+            if (this.rounds[i].soundGuess){ totalPoints++ };
+            if (this.rounds[i].positionGuess){ totalPoints++ };
+        };
+        return totalPoints;
+    }
+};
 {% endhighlight %}
 
 <a href='https://github.com/reidcovington/nback-gem'>nBack Game Logic Ruby Gem API</a>:
+{% highlight ruby %}
+class NbackGame
+  def initialize(n, round_attributes)
+    @n = n
+    @game_mode = game_mode
+    @round_attributes = round_attributes
+    @rounds = []
+  end
 
+  def generate_rounds
+    @round_number = 1
+    @n + 20.times do
+      @rounds << Round.new(@round_number, @round_attributes)
+      @round_number += 1
+    end
+  end
 
-It really wasn’t very difficult at all (shout out to my boy Siyan for taking the lead on this). The simple key is, as I’ve reiterated, taking small pieces of code that could exist on their own and converting them to their own, self-sufficient APIs. By making this mental transition to breaking everything down into small object oriented APIs suddenly the whole world becomes a network of tiny, linked together APIs, which together make up this incredibly complex thing called… planet earth. Okay, I’ve got a little bit of a <span class='tooltip' title='dramatics.jpg'>flare for the dramatics</span>, but it is pretty fucking cool, ya?!
+  def evaluate_users_guess(current_round_number, attribute)
+    @current_round = @rounds[current_round_number - 1]
+    @nback_round = @rounds[current_round_number - 1 - @n]
+
+    if current_round_number > @n
+      if @current_round.round_attributes[attribute.to_sym] == @nback_round.round_attributes[attribute.to_sym]
+        @current_round.round_attributes["#{attribute}_correct".to_sym] = true
+      else
+        @current_round.round_attributes["#{attribute}_correct".to_sym] = false
+      end
+    else
+      @current_round.round_attributes["#{attribute}_correct".to_sym] = false
+    end
+  end
+
+  def evaluate_non_response(current_round_number)
+    @current_round = @rounds[current_round_number - 1]
+    @nback_round = @rounds[current_round_number - 1 - @n]
+
+    if current_round_number < @n
+      @round_attributes.each_key do |attribute|
+        if @current_round.round_attributes["#{attribute}_correct".to_sym] == nil
+          if @current_round.round_attributes[attribute.to_sym] != @nback_round.round_attributes[attribute.to_sym]
+            @current_round.round_attributes["#{attribute}_correct".to_sym] = true
+          end
+        end
+      end
+    else
+      @round_attributes.each_key do |attribute|
+        if @current_round.round_attributes["#{attribute}_correct".to_sym] == nil
+          if @current_round.round_attributes[attribute.to_sym] != @nback_round.round_attributes[attribute.to_sym]
+            @current_round.round_attributes["#{attribute}_correct".to_sym] = true
+          else
+            @current_round.round_attributes["#{attribute}_correct".to_sym] = false
+          end
+        end
+      end
+    end
+  end
+
+  def show_round_attributes(round_number)
+    @rounds[round_number - 1].round_attributes
+  end
+end
+{% endhighlight %}
+
+It really wasn’t very difficult at all (shout out to my boy <a href='http://www.siyanbeverly.com/'>Siyan</a> for taking the lead on this). As you can see, the core of our app, the Game Model, and its fundamental characteristics (using n value to create each round of the game with whatever attributes your game calls for + scoring each round) was easily extracted into a Ruby gem.
+
+The simple key is, as I’ve reiterated, taking small pieces of code that could exist on their own and converting them to their own, self-sufficient APIs. By making this mental transition to breaking everything down into small object oriented APIs suddenly the whole world becomes a network of tiny, linked together APIs, which together make up this incredibly complex thing called… planet earth. Okay, I’ve got a little bit of a <span class='tooltip' title='dramatics.jpg'>flare for the dramatics</span>, but it is pretty fucking cool, ya?!
 
