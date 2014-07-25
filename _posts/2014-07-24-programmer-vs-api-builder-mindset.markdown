@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Programmer vs. API Builder Mindset"
+title:  "Atomic Programming Theory: Programmer vs. API Builder Mindset"
 date:   2014-07-24
 tags:
 - code
