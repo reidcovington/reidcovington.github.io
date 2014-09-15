@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "'Am I in?!'...Implementing Google Analytics with Jekyll and verifying the implimentation"
+title:  "Implementing Google Analytics with Jekyll and verifying the implimentation"
 date:   2014-07-21
 tags:
 - code
@@ -8,7 +8,6 @@ tags:
 - analytics
 ---
 
-<br><center><img src='/assets/amiin1.jpg' alt='Am I in?!'></center><br><br>
 This wasn’t my first time implementing <a href='http://www.google.com/analytics/'>Google Analytics</a>, but it was my first time doing the entire process from account creation to full implementation on my own… and <span class='tooltip' title='easyaspie.jpg'>it couldn’t have been easier</span> (implementing it, but verifying its implementation proved trickier, more on this later).
 
 First, create a Google Analytics account ( < 5min). Simply follow the steps Google provides to register your website with Google Analytics, fill in your URL (including cross/sub domain tracking if your home page is not the same as your base url; ex: if www.reidcovington.com redirected to www.reidcovington.com/index.html), create 1 simple `view` that will be where you can view your analytics, and then Google Analytics will give you a JavaScript Snippet with your unique tracking code to embed everywhere you want GA to track:
